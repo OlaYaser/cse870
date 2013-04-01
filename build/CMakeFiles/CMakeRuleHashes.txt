@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+ef8efdc0e3510521da070932e9e6b254 sdk/CMakeFiles/pbs_automoc

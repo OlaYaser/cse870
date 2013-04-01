@@ -1,0 +1,3 @@
+/Users/scottklum/cse870/build/sdk/CMakeFiles/pbs.dir
+/Users/scottklum/cse870/build/sdk/CMakeFiles/pbs_automoc.dir
+/Users/scottklum/cse870/build/app/CMakeFiles/pbs_demo.dir

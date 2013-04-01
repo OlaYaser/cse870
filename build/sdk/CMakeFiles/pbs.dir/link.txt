@@ -1,0 +1,2 @@
+/usr/bin/ar cr libpbs.a  CMakeFiles/pbs.dir/canvas.cpp.o CMakeFiles/pbs.dir/controller.cpp.o CMakeFiles/pbs.dir/mainwindow.cpp.o CMakeFiles/pbs.dir/pbs_automoc.cpp.o
+/usr/bin/ranlib libpbs.a
