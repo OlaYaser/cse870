@@ -21,8 +21,24 @@ QObject
 -
 QPoint
 -
+QTimer
+-
 QDebug
 -
+object.h
+../sdk/object.h
+mainWindow.h
+../sdk/mainWindow.h
+
+../sdk/mainWindow.h
+QMainWindow
+-
+QHBoxLayout
+-
+QLabel
+-
+canvas.h
+../sdk/canvas.h
 
 ../sdk/mainwindow.h
 QMainWindow
@@ -31,13 +47,19 @@ QHBoxLayout
 -
 QLabel
 -
-controller.h
-../sdk/controller.h
 canvas.h
 ../sdk/canvas.h
 
+../sdk/object.h
+QDebug
+-
+QPoint
+-
+
 /Users/scottklum/cse870/app/main.cpp
 QApplication
+-
+QTimer
 -
 mainwindow.h
 /Users/scottklum/cse870/app/mainwindow.h
@@ -59,6 +81,10 @@ qobject.h
 /usr/local/Cellar/qt5/5.0.1/include/QtCore/QPoint
 qpoint.h
 /usr/local/Cellar/qt5/5.0.1/include/QtCore/qpoint.h
+
+/usr/local/Cellar/qt5/5.0.1/include/QtCore/QTimer
+qtimer.h
+/usr/local/Cellar/qt5/5.0.1/include/QtCore/qtimer.h
 
 /usr/local/Cellar/qt5/5.0.1/include/QtCore/qalgorithms.h
 QtCore/qglobal.h
@@ -210,6 +236,12 @@ QtCore/qatomic_cxx11.h
 QtCore/qatomic_gcc.h
 -
 QtCore/qatomic_unix.h
+-
+
+/usr/local/Cellar/qt5/5.0.1/include/QtCore/qbasictimer.h
+QtCore/qglobal.h
+-
+QtCore/qnamespace.h
 -
 
 /usr/local/Cellar/qt5/5.0.1/include/QtCore/qbytearray.h
@@ -628,6 +660,12 @@ QtCore/qlocale.h
 QtCore/qscopedpointer.h
 -
 stdio.h
+-
+
+/usr/local/Cellar/qt5/5.0.1/include/QtCore/qtimer.h
+QtCore/qbasictimer.h
+-
+QtCore/qobject.h
 -
 
 /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtypeinfo.h

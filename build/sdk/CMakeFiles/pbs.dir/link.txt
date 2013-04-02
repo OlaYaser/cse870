@@ -1,2 +1,2 @@
-/usr/bin/ar cr libpbs.a  CMakeFiles/pbs.dir/canvas.cpp.o CMakeFiles/pbs.dir/controller.cpp.o CMakeFiles/pbs.dir/mainwindow.cpp.o CMakeFiles/pbs.dir/pbs_automoc.cpp.o
+/usr/bin/ar cr libpbs.a  CMakeFiles/pbs.dir/alarm.cpp.o CMakeFiles/pbs.dir/canvas.cpp.o CMakeFiles/pbs.dir/controller.cpp.o CMakeFiles/pbs.dir/detection.cpp.o CMakeFiles/pbs.dir/mainwindow.cpp.o CMakeFiles/pbs.dir/monitor.cpp.o CMakeFiles/pbs.dir/object.cpp.o CMakeFiles/pbs.dir/prevention.cpp.o CMakeFiles/pbs.dir/recommendation.cpp.o CMakeFiles/pbs.dir/pbs_automoc.cpp.o
 /usr/bin/ranlib libpbs.a

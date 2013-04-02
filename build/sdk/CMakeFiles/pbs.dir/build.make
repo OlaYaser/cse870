@@ -52,9 +52,32 @@ include sdk/CMakeFiles/pbs.dir/progress.make
 # Include the compile flags for this target's objects.
 include sdk/CMakeFiles/pbs.dir/flags.make
 
+sdk/CMakeFiles/pbs.dir/alarm.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
+sdk/CMakeFiles/pbs.dir/alarm.cpp.o: ../sdk/alarm.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/alarm.cpp.o"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/alarm.cpp.o -c /Users/scottklum/cse870/sdk/alarm.cpp
+
+sdk/CMakeFiles/pbs.dir/alarm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pbs.dir/alarm.cpp.i"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/scottklum/cse870/sdk/alarm.cpp > CMakeFiles/pbs.dir/alarm.cpp.i
+
+sdk/CMakeFiles/pbs.dir/alarm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pbs.dir/alarm.cpp.s"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/scottklum/cse870/sdk/alarm.cpp -o CMakeFiles/pbs.dir/alarm.cpp.s
+
+sdk/CMakeFiles/pbs.dir/alarm.cpp.o.requires:
+.PHONY : sdk/CMakeFiles/pbs.dir/alarm.cpp.o.requires
+
+sdk/CMakeFiles/pbs.dir/alarm.cpp.o.provides: sdk/CMakeFiles/pbs.dir/alarm.cpp.o.requires
+	$(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/alarm.cpp.o.provides.build
+.PHONY : sdk/CMakeFiles/pbs.dir/alarm.cpp.o.provides
+
+sdk/CMakeFiles/pbs.dir/alarm.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/alarm.cpp.o
+
 sdk/CMakeFiles/pbs.dir/canvas.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
 sdk/CMakeFiles/pbs.dir/canvas.cpp.o: ../sdk/canvas.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/canvas.cpp.o"
 	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/canvas.cpp.o -c /Users/scottklum/cse870/sdk/canvas.cpp
 
@@ -77,7 +100,7 @@ sdk/CMakeFiles/pbs.dir/canvas.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/canva
 
 sdk/CMakeFiles/pbs.dir/controller.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
 sdk/CMakeFiles/pbs.dir/controller.cpp.o: ../sdk/controller.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/controller.cpp.o"
 	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/controller.cpp.o -c /Users/scottklum/cse870/sdk/controller.cpp
 
@@ -98,9 +121,32 @@ sdk/CMakeFiles/pbs.dir/controller.cpp.o.provides: sdk/CMakeFiles/pbs.dir/control
 
 sdk/CMakeFiles/pbs.dir/controller.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/controller.cpp.o
 
+sdk/CMakeFiles/pbs.dir/detection.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
+sdk/CMakeFiles/pbs.dir/detection.cpp.o: ../sdk/detection.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/detection.cpp.o"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/detection.cpp.o -c /Users/scottklum/cse870/sdk/detection.cpp
+
+sdk/CMakeFiles/pbs.dir/detection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pbs.dir/detection.cpp.i"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/scottklum/cse870/sdk/detection.cpp > CMakeFiles/pbs.dir/detection.cpp.i
+
+sdk/CMakeFiles/pbs.dir/detection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pbs.dir/detection.cpp.s"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/scottklum/cse870/sdk/detection.cpp -o CMakeFiles/pbs.dir/detection.cpp.s
+
+sdk/CMakeFiles/pbs.dir/detection.cpp.o.requires:
+.PHONY : sdk/CMakeFiles/pbs.dir/detection.cpp.o.requires
+
+sdk/CMakeFiles/pbs.dir/detection.cpp.o.provides: sdk/CMakeFiles/pbs.dir/detection.cpp.o.requires
+	$(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/detection.cpp.o.provides.build
+.PHONY : sdk/CMakeFiles/pbs.dir/detection.cpp.o.provides
+
+sdk/CMakeFiles/pbs.dir/detection.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/detection.cpp.o
+
 sdk/CMakeFiles/pbs.dir/mainwindow.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
 sdk/CMakeFiles/pbs.dir/mainwindow.cpp.o: ../sdk/mainwindow.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/mainwindow.cpp.o"
 	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/mainwindow.cpp.o -c /Users/scottklum/cse870/sdk/mainwindow.cpp
 
@@ -121,9 +167,101 @@ sdk/CMakeFiles/pbs.dir/mainwindow.cpp.o.provides: sdk/CMakeFiles/pbs.dir/mainwin
 
 sdk/CMakeFiles/pbs.dir/mainwindow.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/mainwindow.cpp.o
 
+sdk/CMakeFiles/pbs.dir/monitor.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
+sdk/CMakeFiles/pbs.dir/monitor.cpp.o: ../sdk/monitor.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/monitor.cpp.o"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/monitor.cpp.o -c /Users/scottklum/cse870/sdk/monitor.cpp
+
+sdk/CMakeFiles/pbs.dir/monitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pbs.dir/monitor.cpp.i"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/scottklum/cse870/sdk/monitor.cpp > CMakeFiles/pbs.dir/monitor.cpp.i
+
+sdk/CMakeFiles/pbs.dir/monitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pbs.dir/monitor.cpp.s"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/scottklum/cse870/sdk/monitor.cpp -o CMakeFiles/pbs.dir/monitor.cpp.s
+
+sdk/CMakeFiles/pbs.dir/monitor.cpp.o.requires:
+.PHONY : sdk/CMakeFiles/pbs.dir/monitor.cpp.o.requires
+
+sdk/CMakeFiles/pbs.dir/monitor.cpp.o.provides: sdk/CMakeFiles/pbs.dir/monitor.cpp.o.requires
+	$(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/monitor.cpp.o.provides.build
+.PHONY : sdk/CMakeFiles/pbs.dir/monitor.cpp.o.provides
+
+sdk/CMakeFiles/pbs.dir/monitor.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/monitor.cpp.o
+
+sdk/CMakeFiles/pbs.dir/object.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
+sdk/CMakeFiles/pbs.dir/object.cpp.o: ../sdk/object.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/object.cpp.o"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/object.cpp.o -c /Users/scottklum/cse870/sdk/object.cpp
+
+sdk/CMakeFiles/pbs.dir/object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pbs.dir/object.cpp.i"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/scottklum/cse870/sdk/object.cpp > CMakeFiles/pbs.dir/object.cpp.i
+
+sdk/CMakeFiles/pbs.dir/object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pbs.dir/object.cpp.s"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/scottklum/cse870/sdk/object.cpp -o CMakeFiles/pbs.dir/object.cpp.s
+
+sdk/CMakeFiles/pbs.dir/object.cpp.o.requires:
+.PHONY : sdk/CMakeFiles/pbs.dir/object.cpp.o.requires
+
+sdk/CMakeFiles/pbs.dir/object.cpp.o.provides: sdk/CMakeFiles/pbs.dir/object.cpp.o.requires
+	$(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/object.cpp.o.provides.build
+.PHONY : sdk/CMakeFiles/pbs.dir/object.cpp.o.provides
+
+sdk/CMakeFiles/pbs.dir/object.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/object.cpp.o
+
+sdk/CMakeFiles/pbs.dir/prevention.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
+sdk/CMakeFiles/pbs.dir/prevention.cpp.o: ../sdk/prevention.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/prevention.cpp.o"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/prevention.cpp.o -c /Users/scottklum/cse870/sdk/prevention.cpp
+
+sdk/CMakeFiles/pbs.dir/prevention.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pbs.dir/prevention.cpp.i"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/scottklum/cse870/sdk/prevention.cpp > CMakeFiles/pbs.dir/prevention.cpp.i
+
+sdk/CMakeFiles/pbs.dir/prevention.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pbs.dir/prevention.cpp.s"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/scottklum/cse870/sdk/prevention.cpp -o CMakeFiles/pbs.dir/prevention.cpp.s
+
+sdk/CMakeFiles/pbs.dir/prevention.cpp.o.requires:
+.PHONY : sdk/CMakeFiles/pbs.dir/prevention.cpp.o.requires
+
+sdk/CMakeFiles/pbs.dir/prevention.cpp.o.provides: sdk/CMakeFiles/pbs.dir/prevention.cpp.o.requires
+	$(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/prevention.cpp.o.provides.build
+.PHONY : sdk/CMakeFiles/pbs.dir/prevention.cpp.o.provides
+
+sdk/CMakeFiles/pbs.dir/prevention.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/prevention.cpp.o
+
+sdk/CMakeFiles/pbs.dir/recommendation.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
+sdk/CMakeFiles/pbs.dir/recommendation.cpp.o: ../sdk/recommendation.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/recommendation.cpp.o"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/recommendation.cpp.o -c /Users/scottklum/cse870/sdk/recommendation.cpp
+
+sdk/CMakeFiles/pbs.dir/recommendation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pbs.dir/recommendation.cpp.i"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/scottklum/cse870/sdk/recommendation.cpp > CMakeFiles/pbs.dir/recommendation.cpp.i
+
+sdk/CMakeFiles/pbs.dir/recommendation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pbs.dir/recommendation.cpp.s"
+	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/scottklum/cse870/sdk/recommendation.cpp -o CMakeFiles/pbs.dir/recommendation.cpp.s
+
+sdk/CMakeFiles/pbs.dir/recommendation.cpp.o.requires:
+.PHONY : sdk/CMakeFiles/pbs.dir/recommendation.cpp.o.requires
+
+sdk/CMakeFiles/pbs.dir/recommendation.cpp.o.provides: sdk/CMakeFiles/pbs.dir/recommendation.cpp.o.requires
+	$(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/recommendation.cpp.o.provides.build
+.PHONY : sdk/CMakeFiles/pbs.dir/recommendation.cpp.o.provides
+
+sdk/CMakeFiles/pbs.dir/recommendation.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/recommendation.cpp.o
+
 sdk/CMakeFiles/pbs.dir/pbs_automoc.cpp.o: sdk/CMakeFiles/pbs.dir/flags.make
 sdk/CMakeFiles/pbs.dir/pbs_automoc.cpp.o: sdk/pbs_automoc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object sdk/CMakeFiles/pbs.dir/pbs_automoc.cpp.o"
 	cd /Users/scottklum/cse870/build/sdk && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/pbs.dir/pbs_automoc.cpp.o -c /Users/scottklum/cse870/build/sdk/pbs_automoc.cpp
 
@@ -146,17 +284,29 @@ sdk/CMakeFiles/pbs.dir/pbs_automoc.cpp.o.provides.build: sdk/CMakeFiles/pbs.dir/
 
 # Object files for target pbs
 pbs_OBJECTS = \
+"CMakeFiles/pbs.dir/alarm.cpp.o" \
 "CMakeFiles/pbs.dir/canvas.cpp.o" \
 "CMakeFiles/pbs.dir/controller.cpp.o" \
+"CMakeFiles/pbs.dir/detection.cpp.o" \
 "CMakeFiles/pbs.dir/mainwindow.cpp.o" \
+"CMakeFiles/pbs.dir/monitor.cpp.o" \
+"CMakeFiles/pbs.dir/object.cpp.o" \
+"CMakeFiles/pbs.dir/prevention.cpp.o" \
+"CMakeFiles/pbs.dir/recommendation.cpp.o" \
 "CMakeFiles/pbs.dir/pbs_automoc.cpp.o"
 
 # External object files for target pbs
 pbs_EXTERNAL_OBJECTS =
 
+sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/alarm.cpp.o
 sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/canvas.cpp.o
 sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/controller.cpp.o
+sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/detection.cpp.o
 sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/mainwindow.cpp.o
+sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/monitor.cpp.o
+sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/object.cpp.o
+sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/prevention.cpp.o
+sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/recommendation.cpp.o
 sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/pbs_automoc.cpp.o
 sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/build.make
 sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/link.txt
@@ -168,9 +318,15 @@ sdk/libpbs.a: sdk/CMakeFiles/pbs.dir/link.txt
 sdk/CMakeFiles/pbs.dir/build: sdk/libpbs.a
 .PHONY : sdk/CMakeFiles/pbs.dir/build
 
+sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/alarm.cpp.o.requires
 sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/canvas.cpp.o.requires
 sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/controller.cpp.o.requires
+sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/detection.cpp.o.requires
 sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/mainwindow.cpp.o.requires
+sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/monitor.cpp.o.requires
+sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/object.cpp.o.requires
+sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/prevention.cpp.o.requires
+sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/recommendation.cpp.o.requires
 sdk/CMakeFiles/pbs.dir/requires: sdk/CMakeFiles/pbs.dir/pbs_automoc.cpp.o.requires
 .PHONY : sdk/CMakeFiles/pbs.dir/requires
 

@@ -190,6 +190,30 @@ pbs_automoc/fast:
 	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs_automoc.dir/build.make sdk/CMakeFiles/pbs_automoc.dir/build
 .PHONY : pbs_automoc/fast
 
+alarm.o: alarm.cpp.o
+.PHONY : alarm.o
+
+# target to build an object file
+alarm.cpp.o:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/alarm.cpp.o
+.PHONY : alarm.cpp.o
+
+alarm.i: alarm.cpp.i
+.PHONY : alarm.i
+
+# target to preprocess a source file
+alarm.cpp.i:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/alarm.cpp.i
+.PHONY : alarm.cpp.i
+
+alarm.s: alarm.cpp.s
+.PHONY : alarm.s
+
+# target to generate assembly for a file
+alarm.cpp.s:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/alarm.cpp.s
+.PHONY : alarm.cpp.s
+
 canvas.o: canvas.cpp.o
 .PHONY : canvas.o
 
@@ -238,6 +262,30 @@ controller.cpp.s:
 	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/controller.cpp.s
 .PHONY : controller.cpp.s
 
+detection.o: detection.cpp.o
+.PHONY : detection.o
+
+# target to build an object file
+detection.cpp.o:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/detection.cpp.o
+.PHONY : detection.cpp.o
+
+detection.i: detection.cpp.i
+.PHONY : detection.i
+
+# target to preprocess a source file
+detection.cpp.i:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/detection.cpp.i
+.PHONY : detection.cpp.i
+
+detection.s: detection.cpp.s
+.PHONY : detection.s
+
+# target to generate assembly for a file
+detection.cpp.s:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/detection.cpp.s
+.PHONY : detection.cpp.s
+
 mainwindow.o: mainwindow.cpp.o
 .PHONY : mainwindow.o
 
@@ -261,6 +309,54 @@ mainwindow.s: mainwindow.cpp.s
 mainwindow.cpp.s:
 	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
+
+monitor.o: monitor.cpp.o
+.PHONY : monitor.o
+
+# target to build an object file
+monitor.cpp.o:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/monitor.cpp.o
+.PHONY : monitor.cpp.o
+
+monitor.i: monitor.cpp.i
+.PHONY : monitor.i
+
+# target to preprocess a source file
+monitor.cpp.i:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/monitor.cpp.i
+.PHONY : monitor.cpp.i
+
+monitor.s: monitor.cpp.s
+.PHONY : monitor.s
+
+# target to generate assembly for a file
+monitor.cpp.s:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/monitor.cpp.s
+.PHONY : monitor.cpp.s
+
+object.o: object.cpp.o
+.PHONY : object.o
+
+# target to build an object file
+object.cpp.o:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/object.cpp.o
+.PHONY : object.cpp.o
+
+object.i: object.cpp.i
+.PHONY : object.i
+
+# target to preprocess a source file
+object.cpp.i:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/object.cpp.i
+.PHONY : object.cpp.i
+
+object.s: object.cpp.s
+.PHONY : object.s
+
+# target to generate assembly for a file
+object.cpp.s:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/object.cpp.s
+.PHONY : object.cpp.s
 
 pbs_automoc.o: pbs_automoc.cpp.o
 .PHONY : pbs_automoc.o
@@ -286,6 +382,54 @@ pbs_automoc.cpp.s:
 	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/pbs_automoc.cpp.s
 .PHONY : pbs_automoc.cpp.s
 
+prevention.o: prevention.cpp.o
+.PHONY : prevention.o
+
+# target to build an object file
+prevention.cpp.o:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/prevention.cpp.o
+.PHONY : prevention.cpp.o
+
+prevention.i: prevention.cpp.i
+.PHONY : prevention.i
+
+# target to preprocess a source file
+prevention.cpp.i:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/prevention.cpp.i
+.PHONY : prevention.cpp.i
+
+prevention.s: prevention.cpp.s
+.PHONY : prevention.s
+
+# target to generate assembly for a file
+prevention.cpp.s:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/prevention.cpp.s
+.PHONY : prevention.cpp.s
+
+recommendation.o: recommendation.cpp.o
+.PHONY : recommendation.o
+
+# target to build an object file
+recommendation.cpp.o:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/recommendation.cpp.o
+.PHONY : recommendation.cpp.o
+
+recommendation.i: recommendation.cpp.i
+.PHONY : recommendation.i
+
+# target to preprocess a source file
+recommendation.cpp.i:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/recommendation.cpp.i
+.PHONY : recommendation.cpp.i
+
+recommendation.s: recommendation.cpp.s
+.PHONY : recommendation.s
+
+# target to generate assembly for a file
+recommendation.cpp.s:
+	cd /Users/scottklum/cse870/build && $(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/recommendation.cpp.s
+.PHONY : recommendation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -302,18 +446,36 @@ help:
 	@echo "... pbs"
 	@echo "... pbs_automoc"
 	@echo "... rebuild_cache"
+	@echo "... alarm.o"
+	@echo "... alarm.i"
+	@echo "... alarm.s"
 	@echo "... canvas.o"
 	@echo "... canvas.i"
 	@echo "... canvas.s"
 	@echo "... controller.o"
 	@echo "... controller.i"
 	@echo "... controller.s"
+	@echo "... detection.o"
+	@echo "... detection.i"
+	@echo "... detection.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... monitor.o"
+	@echo "... monitor.i"
+	@echo "... monitor.s"
+	@echo "... object.o"
+	@echo "... object.i"
+	@echo "... object.s"
 	@echo "... pbs_automoc.o"
 	@echo "... pbs_automoc.i"
 	@echo "... pbs_automoc.s"
+	@echo "... prevention.o"
+	@echo "... prevention.i"
+	@echo "... prevention.s"
+	@echo "... recommendation.o"
+	@echo "... recommendation.i"
+	@echo "... recommendation.s"
 .PHONY : help
 
 

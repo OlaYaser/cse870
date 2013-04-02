@@ -3,23 +3,34 @@
 
 #include <QObject>
 #include <QPoint>
+#include <QTimer>
 #include <QDebug>
+
+#include "object.h"
+#include "mainWindow.h"
 
 class Controller : public QObject
 {
     Q_OBJECT
 
-    QList<QPoint> objects/* TODO change to object class */;
-
-    // Set controller to own mainwindow and objects
-    // When mainwindow emits signal catch it, when controller emits moveObjects catch it in main window
+    MainWindow *mainWindow;
+    QList<Object> objects;
+    QTimer *timer;
 
 public:
-    void incrementTime() { qDebug() << "incrementing"; }
+    explicit Controller(MainWindow *mainWindow, QObject *parent = 0);
 
 public slots:
 
-    void addObject(const QPoint &object) { objects.append(object); }
+    void addObject(const QPoint &position);
+
+    void incrementTime();
+
+    void start(int count) { timer->start(count); }
+    void finish() { timer->stop(); }
+
+signals:
+    void drawObjects(QList<QPoint>);
 
 };
 

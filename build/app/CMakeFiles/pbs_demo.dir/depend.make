@@ -3,12 +3,15 @@
 
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: ../sdk/canvas.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: ../sdk/controller.h
+app/CMakeFiles/pbs_demo.dir/main.cpp.o: ../sdk/mainWindow.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: ../sdk/mainwindow.h
+app/CMakeFiles/pbs_demo.dir/main.cpp.o: ../sdk/object.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: ../app/main.cpp
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/QDebug
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/QList
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/QObject
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/QPoint
+app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/QTimer
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qalgorithms.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qarraydata.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qatomic.h
@@ -32,6 +35,7 @@ app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCo
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qatomic_vxworks.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qatomic_x86.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qbasicatomic.h
+app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qbasictimer.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qbytearray.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qchar.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qcompilerdetection.h
@@ -85,6 +89,7 @@ app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCo
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qsysinfo.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qsystemdetection.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtextstream.h
+app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtimer.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtypeinfo.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtypetraits.h
 app/CMakeFiles/pbs_demo.dir/main.cpp.o: /usr/local/Cellar/qt5/5.0.1/include/QtCore/qurl.h

@@ -29,9 +29,15 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/pbs" TYPE FILE FILES
+    "/Users/scottklum/cse870/sdk/alarm.h"
     "/Users/scottklum/cse870/sdk/canvas.h"
     "/Users/scottklum/cse870/sdk/controller.h"
+    "/Users/scottklum/cse870/sdk/detection.h"
     "/Users/scottklum/cse870/sdk/mainwindow.h"
+    "/Users/scottklum/cse870/sdk/monitor.h"
+    "/Users/scottklum/cse870/sdk/object.h"
+    "/Users/scottklum/cse870/sdk/prevention.h"
+    "/Users/scottklum/cse870/sdk/recommendation.h"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

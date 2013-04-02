@@ -78,7 +78,7 @@ sdk/preinstall:
 sdk/CMakeFiles/pbs.dir/all: sdk/CMakeFiles/pbs_automoc.dir/all
 	$(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/depend
 	$(MAKE) -f sdk/CMakeFiles/pbs.dir/build.make sdk/CMakeFiles/pbs.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles  1 2 3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles  1 2 3 4 5 6 7 8 9 10
 	@echo "Built target pbs"
 .PHONY : sdk/CMakeFiles/pbs.dir/all
 
@@ -88,7 +88,7 @@ all: sdk/CMakeFiles/pbs.dir/all
 
 # Build rule for subdir invocation for target.
 sdk/CMakeFiles/pbs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/scottklum/cse870/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/scottklum/cse870/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 sdk/CMakeFiles/pbs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/scottklum/cse870/build/CMakeFiles 0
 .PHONY : sdk/CMakeFiles/pbs.dir/rule
@@ -113,7 +113,7 @@ clean: sdk/CMakeFiles/pbs.dir/clean
 sdk/CMakeFiles/pbs_automoc.dir/all:
 	$(MAKE) -f sdk/CMakeFiles/pbs_automoc.dir/build.make sdk/CMakeFiles/pbs_automoc.dir/depend
 	$(MAKE) -f sdk/CMakeFiles/pbs_automoc.dir/build.make sdk/CMakeFiles/pbs_automoc.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles  11
 	@echo "Built target pbs_automoc"
 .PHONY : sdk/CMakeFiles/pbs_automoc.dir/all
 
@@ -159,7 +159,7 @@ app/preinstall:
 app/CMakeFiles/pbs_demo.dir/all: sdk/CMakeFiles/pbs.dir/all
 	$(MAKE) -f app/CMakeFiles/pbs_demo.dir/build.make app/CMakeFiles/pbs_demo.dir/depend
 	$(MAKE) -f app/CMakeFiles/pbs_demo.dir/build.make app/CMakeFiles/pbs_demo.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /Users/scottklum/cse870/build/CMakeFiles  12
 	@echo "Built target pbs_demo"
 .PHONY : app/CMakeFiles/pbs_demo.dir/all
 
@@ -169,7 +169,7 @@ all: app/CMakeFiles/pbs_demo.dir/all
 
 # Build rule for subdir invocation for target.
 app/CMakeFiles/pbs_demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/scottklum/cse870/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/scottklum/cse870/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 app/CMakeFiles/pbs_demo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/scottklum/cse870/build/CMakeFiles 0
 .PHONY : app/CMakeFiles/pbs_demo.dir/rule

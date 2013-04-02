@@ -1,4 +1,5 @@
 #include <QApplication>
+#include <QTimer>
 
 #include "mainwindow.h"
 #include "controller.h"
@@ -9,9 +10,11 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    Controller controller;
+    MainWindow mainWindow;
 
-    MainWindow mainWindow(&controller);
+    Controller controller(&mainWindow);
+    controller.start(100);
+
     mainWindow.show();
 
     int result = app.exec();

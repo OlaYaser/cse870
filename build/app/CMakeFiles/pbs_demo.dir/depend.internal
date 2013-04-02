@@ -4,12 +4,15 @@
 app/CMakeFiles/pbs_demo.dir/main.cpp.o
  ../sdk/canvas.h
  ../sdk/controller.h
+ ../sdk/mainWindow.h
  ../sdk/mainwindow.h
+ ../sdk/object.h
  /Users/scottklum/cse870/app/main.cpp
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/QDebug
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/QList
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/QObject
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/QPoint
+ /usr/local/Cellar/qt5/5.0.1/include/QtCore/QTimer
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qalgorithms.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qarraydata.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qatomic.h
@@ -33,6 +36,7 @@ app/CMakeFiles/pbs_demo.dir/main.cpp.o
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qatomic_vxworks.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qatomic_x86.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qbasicatomic.h
+ /usr/local/Cellar/qt5/5.0.1/include/QtCore/qbasictimer.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qbytearray.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qchar.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qcompilerdetection.h
@@ -86,6 +90,7 @@ app/CMakeFiles/pbs_demo.dir/main.cpp.o
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qsysinfo.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qsystemdetection.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtextstream.h
+ /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtimer.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtypeinfo.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qtypetraits.h
  /usr/local/Cellar/qt5/5.0.1/include/QtCore/qurl.h

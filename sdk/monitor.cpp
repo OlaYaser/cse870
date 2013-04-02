@@ -2,7 +2,7 @@
 
 Monitor* Monitor::GetInstance()
 {
-   if ( m_instance == nullptr )
+   if ( !m_instance )
    {
       m_instance = new Monitor();
    }
@@ -11,7 +11,7 @@ Monitor* Monitor::GetInstance()
 
 Monitor::~Monitor()
 {
-   if ( m_instance != nullptr )
+   if ( m_instance )
    {
       delete m_instance;
    }

@@ -9,7 +9,7 @@
 class Canvas : public QLabel
 {
     Q_OBJECT
-    QList<QPoint> points;
+    QList<QPoint> m_points;
 
 protected slots:
     void mousePressEvent(QMouseEvent *event);
@@ -18,8 +18,11 @@ protected slots:
 public:
     explicit Canvas(QWidget *parent = 0);
 
+public slots:
+    void setPoints(QList<QPoint>);
+
 signals:
-    void newObject(QPoint);
+    void newPoint(QPoint);
 
 };
 

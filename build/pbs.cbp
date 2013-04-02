@@ -282,17 +282,41 @@
       </Build>
       <Unit filename="/Users/scottklum/cse870/app/main.cpp">
       </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/alarm.cpp">
+      </Unit>
       <Unit filename="/Users/scottklum/cse870/sdk/canvas.cpp">
       </Unit>
       <Unit filename="/Users/scottklum/cse870/sdk/controller.cpp">
       </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/detection.cpp">
+      </Unit>
       <Unit filename="/Users/scottklum/cse870/sdk/mainwindow.cpp">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/monitor.cpp">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/object.cpp">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/prevention.cpp">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/recommendation.cpp">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/alarm.h">
       </Unit>
       <Unit filename="/Users/scottklum/cse870/sdk/canvas.h">
       </Unit>
       <Unit filename="/Users/scottklum/cse870/sdk/controller.h">
       </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/detection.h">
+      </Unit>
       <Unit filename="/Users/scottklum/cse870/sdk/mainwindow.h">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/monitor.h">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/object.h">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/prevention.h">
+      </Unit>
+      <Unit filename="/Users/scottklum/cse870/sdk/recommendation.h">
       </Unit>
       <Unit filename="/Users/scottklum/cse870/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />

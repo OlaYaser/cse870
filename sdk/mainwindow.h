@@ -5,7 +5,6 @@
 #include <QHBoxLayout>
 #include <QLabel>
 
-#include "controller.h"
 #include "canvas.h"
 
 class MainWindow : public QMainWindow
@@ -15,10 +14,18 @@ class MainWindow : public QMainWindow
     Canvas *canvas;
     QWidget *centralWidget;
     QHBoxLayout *hLayout;
-    Controller *controller;
 
 public:
-    explicit MainWindow(Controller *c, QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = 0);
+
+public slots:
+
+protected slots:
+    void keyPressEvent(QKeyEvent *event);
+
+signals:
+    void draw(QList<QPoint>);
+    void newObject(QPoint);
 
 };
 
