@@ -48,8 +48,9 @@ void Canvas::paintEvent(QPaintEvent *event)
 
     if (!m_points.isEmpty()) {
         foreach(const QPoint &point, m_points) {
+            if (point.y() > 350) continue;
             double distance = sqrt(pow(point.x()-250, 2.0) + pow(point.y()-350, 2.0));
-            if (distance > 80 || point.y() > 350) painter.setPen(QPen(normal));
+            if (distance > 80) painter.setPen(QPen(normal));
             else if (distance > 50) painter.setPen(QPen(close));
             else painter.setPen(QPen(danger));
 
