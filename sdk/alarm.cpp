@@ -1,6 +1,6 @@
 #include "alarm.h"
 
-void Alarm::InitiateAlarm(double distance)
+void Alarm::InitiateAlarm()
 {
    GenerateSoundAlarm();
    GenerateBlinkingAlarm();

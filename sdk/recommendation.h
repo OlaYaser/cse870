@@ -5,5 +5,5 @@ public:
    Recommendation();
    ~Recommendation();
 
-   void GetRecommendation(double distance);
+   void GetRecommendation();
 };

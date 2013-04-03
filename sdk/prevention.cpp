@@ -1,6 +1,6 @@
 #include "prevention.h"
 
-void Prevention::InitiatePrevention(double distance)
+void Prevention::InitiatePrevention()
 {
    // Documentation does no indicate when to steer or brake, but yea
 }

@@ -1,16 +1,20 @@
 #pragma once
-#include "monitor.h"
+#include <QList>
+#include "object.h"
+#include "common.h"
+class Monitor;
 
 class Detection
 {
 public:
-   void Detect();
+   actionCode_t Detect(QList<Object> objects);
    void Detected(double distance);
 
-   void RequestAlarm(double distance) { Monitor::GetInstance()->InitiateAlarm(distance); }
-   void RequestRecommendation(double distance) { Monitor::GetInstance()->InitiateRecommendation(distance); }
-   void RequestPrevention(double distance) { Monitor::GetInstance()->InitiatePrevention(distance); }
+   void RequestAlarm();
+   void RequestRecommendation();
+   void RequestPrevention();
 
 private:
-   void CalculateDistance();
+   actionCode_t m_actionCode;
+
 };
