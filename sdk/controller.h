@@ -16,9 +16,11 @@ class Controller : public QObject
     MainWindow *mainWindow;
     QList<Object> objects;
     QTimer *timer;
+    Object *car;
 
 public:
     explicit Controller(MainWindow *mainWindow, QObject *parent = 0);
+    ~Controller();
 
 public slots:
 
@@ -26,11 +28,14 @@ public slots:
 
     void incrementTime();
 
+    void accelerateCar(bool positive);
+
     void start(int count) { timer->start(count); }
     void finish() { timer->stop(); }
 
 signals:
     void drawObjects(QList<QPoint>);
+    void newSpeed(int);
 
 };
 

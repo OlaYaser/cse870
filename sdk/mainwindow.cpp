@@ -6,20 +6,23 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
 
-    hLayout = new QHBoxLayout(centralWidget);
+    vLayout = new QVBoxLayout(centralWidget);
 
     canvas = new Canvas(centralWidget);
     connect(canvas, SIGNAL(newPoint(QPoint)), this, SIGNAL(newObject(QPoint)));
     connect(this, SIGNAL(draw(QList<QPoint>)), canvas, SLOT(setPoints(QList<QPoint>)));
-    hLayout->addWidget(canvas);
+    vLayout->addWidget(canvas);
 
-    setLayout(hLayout);
+    vehicleSpeed = new QLabel("Vehicle Speed: ", this);
+    vLayout->addWidget(vehicleSpeed);
+
+    setLayout(vLayout);
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     event->accept();
 
-    if (event->key() == Qt::Key_Up) qDebug() << "Faster!";
-    else if (event->key() == Qt::Key_Down) qDebug() << "Slower!";
+    if (event->key() == Qt::Key_Up) emit accelerate(true);
+    else if (event->key() == Qt::Key_Down) emit accelerate(false);
 }

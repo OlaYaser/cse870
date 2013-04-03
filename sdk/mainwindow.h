@@ -2,7 +2,7 @@
 #define __MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <QLabel>
 
 #include "canvas.h"
@@ -13,12 +13,14 @@ class MainWindow : public QMainWindow
 
     Canvas *canvas;
     QWidget *centralWidget;
-    QHBoxLayout *hLayout;
+    QLabel *vehicleSpeed;
+    QVBoxLayout *vLayout;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
 
 public slots:
+    void displaySpeed(int speed) { vehicleSpeed->setText(QString("Vehicle Speed: %1").arg(speed)); }
 
 protected slots:
     void keyPressEvent(QKeyEvent *event);
@@ -26,6 +28,7 @@ protected slots:
 signals:
     void draw(QList<QPoint>);
     void newObject(QPoint);
+    void accelerate(bool);
 
 };
 

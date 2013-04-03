@@ -19,7 +19,6 @@ void Canvas::mousePressEvent(QMouseEvent *event)
 {
     event->accept();
 
-    qDebug() << "Create new object at: " << event->pos();
     emit newPoint(event->pos());
 
     update();
