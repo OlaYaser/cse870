@@ -10,9 +10,9 @@ public:
    static Monitor* GetInstance();
    ~Monitor();
 
-   void InitiatePrevention(double distance);
-   void InitiateRecommendation(double distance);
-   void InitiateAlarm(double distance);
+   void InitiatePrevention(double distance) { m_pre->InitiatePrevention(distance); }
+   void InitiateRecommendation(double distance) { m_rec->GetRecommendation(distance); }
+   void InitiateAlarm(double distance) { m_ala->InitiateAlarm(distance); }
 
    void SetRecommendation(Recommendation* rec) { m_rec = rec; }
    void SetPrevention(Prevention* pre) { m_pre = pre; }

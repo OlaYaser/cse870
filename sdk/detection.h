@@ -1,18 +1,16 @@
 #pragma once
 #include "monitor.h"
 
-class Monitor;
-
 class Detection
 {
 public:
-   void SetMonitor(Monitor* monitor) { m_monitor = monitor; }
-
    void Detect();
-   void Detected();
+   void Detected(double distance);
+
+   void RequestAlarm(double distance) { Monitor::GetInstance()->InitiateAlarm(distance); }
+   void RequestRecommendation(double distance) { Monitor::GetInstance()->InitiateRecommendation(distance); }
+   void RequestPrevention(double distance) { Monitor::GetInstance()->InitiatePrevention(distance); }
 
 private:
-   Monitor* m_monitor;
-
    void CalculateDistance();
 };
