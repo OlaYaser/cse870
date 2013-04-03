@@ -12,6 +12,7 @@ class Object
     QPoint m_position;
 
 public:
+
     Object(QPoint speed, QPoint position);
 
     QString properties() const { return QString("Speed Horizontal: %1 Speed Vertical: %2 Position: (%3,%4)").arg(m_speed.x()).arg(m_speed.y()).arg(m_position.x()).arg(m_position.y()); }

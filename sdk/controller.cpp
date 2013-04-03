@@ -1,7 +1,8 @@
 #include "controller.h"
+#include "common.h"
 
 const QPoint CAR_SPEED(0,5);
-const QPoint CAR_POSITION(255,350);
+const QPoint CAR_POSITION(250,350);
 
 Controller::Controller(MainWindow *window, QObject *parent) : QObject(parent)
 {
@@ -42,6 +43,8 @@ void Controller::incrementTime()
             newPosition.y() <= 0 /* outside scope of window */ ) objects.removeAt(i);
         else positions.append(newPosition);
     }
+
+    // m_monitor.newObjects(objects);
 
     emit drawObjects(positions);
 }
