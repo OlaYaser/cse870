@@ -20,7 +20,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
 
 public slots:
-    void soundAlarm() { QSound::play(); }
+    void soundAlarm() {  }
     void displaySpeed(int speed) { vehicleSpeed->setText(QString("Vehicle Speed: %1").arg(speed)); }
 
 protected slots:

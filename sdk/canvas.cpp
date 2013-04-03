@@ -12,6 +12,8 @@ Canvas::Canvas(QWidget *parent) : QLabel(parent)
 
     setPixmap(palette);
 
+    actionCode = NOTHING;
+
     setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 }
 
@@ -31,6 +33,11 @@ void Canvas::setPoints(QList<QPoint> points)
     update();
 }
 
+void Canvas::setAction(actionCode_t code)
+{
+    actionCode = code;
+}
+
 
 void Canvas::paintEvent(QPaintEvent *event)
 {
@@ -46,18 +53,6 @@ void Canvas::paintEvent(QPaintEvent *event)
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing, true);
 
-    if (!m_points.isEmpty()) {
-        foreach(const QPoint &point, m_points) {
-            if (point.y() > 350) continue;
-            double distance = sqrt(pow(point.x()-250, 2.0) + pow(point.y()-350, 2.0));
-            if (distance > 80) painter.setPen(QPen(normal));
-            else if (distance > 50) painter.setPen(QPen(close));
-            else painter.setPen(QPen(danger));
-
-            painter.drawEllipse(point,5,5);
-        }
-    }
-
     painter.setPen(QPen(car));
     painter.drawRoundRect(225,350,50,100);
     painter.drawRoundRect(230,360,40,60);
@@ -70,4 +65,17 @@ void Canvas::paintEvent(QPaintEvent *event)
 
     painter.drawPie(innerSensor, startAngle, spanAngle);
     painter.drawPie(outerSensor, startAngle, spanAngle);
+
+    if (!m_points.isEmpty()) {
+        foreach(const QPoint &point, m_points) {
+            painter.drawEllipse(point,5,5);
+        }
+    }
+
+    if (actionCode == NOTHING) painter.setBrush(QBrush(normal, Qt::SolidPattern));
+    else if (actionCode == RECOMMENDATION) painter.setBrush(QBrush(close, Qt::SolidPattern));
+    else painter.setBrush(QBrush(danger, Qt::SolidPattern));
+
+    //painter.setBrush(QBrush(Qt::green, Qt::SolidPattern));
+    painter.drawEllipse(245,375,10,10);
 }
