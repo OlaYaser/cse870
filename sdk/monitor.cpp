@@ -16,18 +16,3 @@ Monitor::~Monitor()
       delete m_instance;
    }
 }
-   
-void Monitor::InitiatePrevention(double distance)
-{
-
-}
-
-void Monitor::InitiateRecommendation(double distance)
-{
-
-}
-
-void Monitor::InitiateAlarm(double distance)
-{
-
-}
