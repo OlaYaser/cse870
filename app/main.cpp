@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
     Controller controller(&mainWindow);
     controller.start(100);
 
+    /*
     Monitor* monitor = Monitor::GetInstance();
 
     Alarm* alarm = new Alarm();
@@ -33,6 +34,7 @@ int main(int argc, char *argv[])
 
     Detection* det = new Detection();
     monitor->SetDetection(det);
+    */
 
     mainWindow.show();
 
