@@ -1,5 +1,9 @@
 #include "alarm.h"
 
+Alarm::Alarm()
+{
+}
+
 void Alarm::InitiateAlarm()
 {
    GenerateSoundAlarm();

@@ -1,5 +1,9 @@
 #include "prevention.h"
 
+Prevention::Prevention()
+{
+}
+
 void Prevention::InitiatePrevention()
 {
    // Documentation does no indicate when to steer or brake, but yea

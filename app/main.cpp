@@ -20,21 +20,17 @@ int main(int argc, char *argv[])
     Controller controller(&mainWindow);
     controller.start(100);
 
-    /*
-    Monitor* monitor = Monitor::GetInstance();
-
     Alarm* alarm = new Alarm();
-    monitor->SetAlarm(alarm);
+    Monitor::GetInstance().SetAlarm(alarm);
 
     Recommendation* rec = new Recommendation();
-    monitor->SetRecommendation(rec);
+    Monitor::GetInstance().SetRecommendation(rec);
 
     Prevention* prev = new Prevention();
-    monitor->SetPrevention(prev);
+    Monitor::GetInstance().SetPrevention(prev);
 
     Detection* det = new Detection();
-    monitor->SetDetection(det);
-    */
+    Monitor::GetInstance().SetDetection(det);
 
     mainWindow.show();
 

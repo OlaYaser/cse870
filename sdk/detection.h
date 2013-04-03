@@ -8,7 +8,7 @@ class Detection
 {
 public:
    actionCode_t Detect(QList<Object> objects);
-   void Detected(double distance);
+   bool Detected(double distance);
 
    void RequestAlarm();
    void RequestRecommendation();
