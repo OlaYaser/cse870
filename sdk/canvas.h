@@ -16,13 +16,13 @@ class Canvas : public QLabel
 protected slots:
     void mousePressEvent(QMouseEvent *event);
     void paintEvent(QPaintEvent *event);
-    void setAction(actionCode_t code);
 
 public:
     explicit Canvas(QWidget *parent = 0);
 
 public slots:
     void setPoints(QList<QPoint>);
+    void setAction(actionCode_t);
 
 signals:
     void newPoint(QPoint);

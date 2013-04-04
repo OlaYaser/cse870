@@ -5,7 +5,7 @@ public:
    Alarm();
    ~Alarm();
 
-   void InitiateAlarm(double distance);
+   void InitiateAlarm();
 
 private:
    void GenerateSoundAlarm();

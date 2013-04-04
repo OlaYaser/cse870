@@ -1,22 +1,54 @@
 #include "detection.h"
+#include "Monitor.h"
+#include <math.h>
 
-void Detection::Detect()
+actionCode_t Detection::Detect(QList<Object> objects, int &index)
 {
-   // Repeatedly loop through list of objects and determine distance
-   // Very hard to cheese without knowing how to get the list
-   // or how the distance works
-   // If an object is within sensor range call Detected
+   m_actionCode = NOTHING;
+   index = -1;
+
+   for(int i = 0; i < objects.count(); i++ )
+   {
+      Object object = objects[i];
+      if ( object.position().y() > 350 ) continue;
+      double distance = sqrt(pow(object.position().x()-250, 2.0) + pow(object.position().y()-350, 2.0));
+      if (!Detected(distance)) {
+          index = i;
+          break;
+      }
+   }
+
+   return m_actionCode;
 }
 
-void Detection::Detected(double distance)
+bool Detection::Detected(double distance)
 {
-   if ( distance < 3 && distance > 1.5 )
+   if ( distance < 80 && distance > 50 )
    {
-      RequestAlarm(distance);
-      RequestRecommendation(distance);
+      RequestAlarm();
+      RequestRecommendation();
+      m_actionCode = RECOMMENDATION;
    }
-   else if ( distance < 1.5 )
+   else if ( distance < 50 )
    {
-      RequestPrevention(distance);
+      RequestPrevention();
+      m_actionCode = PREVENTION;
+      return false;
    }
+   return true;
+}
+
+void Detection::RequestAlarm( )
+{ 
+   Monitor::GetInstance().InitiateAlarm(); 
+}
+
+void Detection::RequestRecommendation()
+{ 
+   Monitor::GetInstance().InitiateRecommendation(); 
+}
+
+void Detection::RequestPrevention()
+{ 
+   Monitor::GetInstance().InitiatePrevention(); 
 }

@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QVBoxLayout>
 #include <QLabel>
+#include <QPushButton>
 
 #include "canvas.h"
 
@@ -15,11 +16,13 @@ class MainWindow : public QMainWindow
     QWidget *centralWidget;
     QLabel *vehicleSpeed;
     QVBoxLayout *vLayout;
+    QPushButton *button;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
 
 public slots:
+
     void soundAlarm() {  }
     void displaySpeed(int speed) { vehicleSpeed->setText(QString("Vehicle Speed: %1").arg(speed)); }
 
@@ -30,6 +33,8 @@ signals:
     void draw(QList<QPoint>);
     void newObject(QPoint);
     void accelerate(bool);
+    void setAction(actionCode_t);
+    void start();
 
 };
 

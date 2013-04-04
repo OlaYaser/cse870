@@ -8,6 +8,7 @@
 
 #include "object.h"
 #include "mainWindow.h"
+#include "common.h"
 
 class Controller : public QObject
 {
@@ -30,11 +31,12 @@ public slots:
 
     void accelerateCar(bool positive);
 
-    void start(int count) { timer->start(count); }
+    void start() { timer->start(100); }
     void finish() { timer->stop(); }
 
 signals:
     void drawObjects(QList<QPoint>);
+    void newAction(actionCode_t);
     void newSpeed(int);
 
 };

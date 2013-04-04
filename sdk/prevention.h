@@ -5,7 +5,7 @@ public:
    Prevention();
    ~Prevention();
 
-   void InitiatePrevention(double distance);
+   void InitiatePrevention();
 
 private:
    void Steer(double angle);
