@@ -5,6 +5,7 @@
 #include "common.h"
 #include "object.h"
 #include "checkpoint.h"
+#include "monitor.h"
 
 class SingleAccessPoint
 {

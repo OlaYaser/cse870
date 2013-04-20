@@ -10,5 +10,5 @@ actionCode_t SingleAccessPoint::access(const QString &username, const QString &p
     // Ask checkpoint for access
     accessCode = m_checkpoint->checkSecurityPolicy(username, password);
 
-    return NOTHING;
+    return Monitor::GetInstance().newObjects(objects, index);
 }

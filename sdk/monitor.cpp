@@ -2,17 +2,10 @@
 
 Monitor::Monitor()
 {
-    alarm = new Alarm();
-    Monitor::GetInstance().SetAlarm(alarm);
-
-    rec = new Recommendation();
-    Monitor::GetInstance().SetRecommendation(rec);
-
-    prev = new Prevention();
-    Monitor::GetInstance().SetPrevention(prev);
-
-    det = new Detection();
-    Monitor::GetInstance().SetDetection(det);
+    m_ala = new Alarm();
+    m_rec = new Recommendation();
+    m_pre = new Prevention();
+    m_det = new Detection();
 }
 
 Monitor& Monitor::GetInstance()

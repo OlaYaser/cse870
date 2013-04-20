@@ -7,6 +7,7 @@
 
 class Monitor
 {
+    friend class SingleAccessPoint;
     friend class Alarm;
     friend class Recommendation;
     friend class Prevention;
