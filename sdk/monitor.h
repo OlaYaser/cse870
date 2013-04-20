@@ -3,11 +3,21 @@
 #include "prevention.h"
 #include "detection.h"
 #include "alarm.h"
+#include "singleaccesspoint.h"
 
 class Monitor
 {
+    friend class Alarm;
+    friend class Recommendation;
+    friend class Prevention;
+    friend class Detection;
+
+    Alarm *alarm;
+    Recommendation *rec;
+    Prevention *prev;
+    Detection *det;
+
 public:
-   static Monitor& GetInstance();
    ~Monitor() {}
 
    void InitiatePrevention() { m_pre->InitiatePrevention(); }
@@ -22,7 +32,10 @@ public:
    void SetAlarm(Alarm* ala) { m_ala = ala; }
 
 private:
-   Monitor() {}
+   static Monitor& GetInstance();
+
+   Monitor();
+
    Recommendation *m_rec;
    Prevention     *m_pre;
    Detection      *m_det;

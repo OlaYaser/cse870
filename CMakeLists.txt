@@ -2,7 +2,7 @@ project(pbs)
 cmake_minimum_required(VERSION 2.8.9)
 
 # Find Qt
-set(QT_DEPENDENCIES Concurrent Core Gui Network Sql Svg Widgets Xml)
+set(QT_DEPENDENCIES Concurrent Core Gui Widgets )
 foreach(QT_DEPENDENCY ${QT_DEPENDENCIES})
   find_package(Qt5${QT_DEPENDENCY})
 endforeach()

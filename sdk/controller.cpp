@@ -10,6 +10,8 @@ Controller::Controller(MainWindow *window, QObject *parent) : QObject(parent)
     connect(mainWindow, SIGNAL(newObject(QPoint)), this, SLOT(addObject(QPoint)));
     connect(mainWindow, SIGNAL(accelerate(bool)), this, SLOT(accelerateCar(bool)));
     connect(mainWindow, SIGNAL(start()), this, SLOT(start()));
+    connect(mainWindow, SIGNAL(newUserInfo(QString, QString)), SLOT(setUserInfo(QString,QString)));
+
     connect(this, SIGNAL(newSpeed(int)), mainWindow, SLOT(displaySpeed(int)));
     connect(this, SIGNAL(drawObjects(QList<QPoint>)), mainWindow, SIGNAL(draw(QList<QPoint>)));
     connect(this, SIGNAL(newAction(actionCode_t)), mainWindow, SIGNAL(setAction(actionCode_t)));
@@ -29,6 +31,12 @@ Controller::~Controller()
 
 void Controller::addObject(const QPoint &position)
 {
+    int index;
+    accessCode_t access;
+    m_sap->access(m_username, m_password, access, objects, index);
+
+    if (access != ROOT) return;
+
     Object object(QPoint(rand()%10-5,rand()%10-5), position);
     objects.append(object);
 
@@ -43,34 +51,51 @@ void Controller::addObject(const QPoint &position)
 
 void Controller::incrementTime()
 {
-    QList<QPoint> positions;
-
-    for (int i=objects.size()-1; i>=0; i--) {
-        QPoint newPosition = objects[i].move(car->speed());
-        if (newPosition.x() >= 500 ||
-            newPosition.y() >= 500 ||
-            newPosition.x() <= 0   ||
-            newPosition.y() <= 0 /* outside scope of window */ ) objects.removeAt(i);
-        else positions.append(newPosition);
-    }
-
     int index;
+    accessCode_t access;
+    actionCode_t action = m_sap->access(m_username, m_password, access, objects, index);
 
-    actionCode_t code = Monitor::GetInstance().newObjects(objects, index);
+    if (access != INTRUDER) {
+        QList<QPoint> positions;
 
-    emit newAction(code);
+        for (int i=objects.size()-1; i>=0; i--) {
+            QPoint newPosition = objects[i].move(car->speed());
+            if (newPosition.x() >= 500 ||
+                    newPosition.y() >= 500 ||
+                    newPosition.x() <= 0   ||
+                    newPosition.y() <= 0 /* outside scope of window */ ) objects.removeAt(i);
+            else positions.append(newPosition);
+        }
 
-    emit drawObjects(positions);
+        emit newAction(action);
 
-    if (code == PREVENTION) {
-        objects.removeAt(index);
-        finish();
+        emit drawObjects(positions);
+
+        if (action == PREVENTION) {
+            objects.removeAt(index);
+            car->setSpeed(QPoint(0,0));
+            emit newSpeed(car->speed().y());
+            finish();
+        }
     }
 }
 
 void Controller::accelerateCar(bool positive)
 {
+    int index;
+    accessCode_t accessCode;
+
+    m_sap->access(m_username, m_password, accessCode, objects, index);
+
+    if (accessCode == INTRUDER) return;
+
     car->accelerate(positive);
 
     emit newSpeed(car->speed().y());
+}
+
+void Controller::setUserInfo(const QString &username, const QString &password)
+{
+    m_username = username;
+    m_password = password;
 }

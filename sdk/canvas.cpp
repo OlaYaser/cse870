@@ -21,6 +21,8 @@ void Canvas::mousePressEvent(QMouseEvent *event)
 {
     event->accept();
 
+    setFocus();
+
     emit newPoint(event->pos());
 
     update();
@@ -76,6 +78,5 @@ void Canvas::paintEvent(QPaintEvent *event)
     else if (actionCode == RECOMMENDATION) painter.setBrush(QBrush(close, Qt::SolidPattern));
     else painter.setBrush(QBrush(danger, Qt::SolidPattern));
 
-    //painter.setBrush(QBrush(Qt::green, Qt::SolidPattern));
     painter.drawEllipse(245,375,10,10);
 }

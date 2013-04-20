@@ -9,6 +9,7 @@
 #include "object.h"
 #include "mainWindow.h"
 #include "common.h"
+#include "singleaccesspoint.h"
 
 class Controller : public QObject
 {
@@ -19,9 +20,15 @@ class Controller : public QObject
     QTimer *timer;
     Object *car;
 
+    QString m_username;
+    QString m_password;
+    SingleAccessPoint *m_sap;
+
 public:
     explicit Controller(MainWindow *mainWindow, QObject *parent = 0);
     ~Controller();
+
+    void askForAccess();
 
 public slots:
 
@@ -33,6 +40,9 @@ public slots:
 
     void start() { timer->start(100); }
     void finish() { timer->stop(); }
+
+    void setSingleAccessPoint(SingleAccessPoint *sap) { m_sap = sap; }
+    void setUserInfo(const QString &username, const QString &password);
 
 signals:
     void drawObjects(QList<QPoint>);

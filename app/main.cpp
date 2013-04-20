@@ -8,6 +8,7 @@
 #include "monitor.h"
 #include "alarm.h"
 #include "recommendation.h"
+#include "checkpoint.h"
 
 using namespace std;
 
@@ -18,19 +19,13 @@ int main(int argc, char *argv[])
     MainWindow mainWindow;
 
     Controller controller(&mainWindow);
+
+    Checkpoint checkpoint;
+
+    SingleAccessPoint sap(&checkpoint);
+
+    controller.setSingleAccessPoint(&sap);
     controller.start();
-
-    Alarm* alarm = new Alarm();
-    Monitor::GetInstance().SetAlarm(alarm);
-
-    Recommendation* rec = new Recommendation();
-    Monitor::GetInstance().SetRecommendation(rec);
-
-    Prevention* prev = new Prevention();
-    Monitor::GetInstance().SetPrevention(prev);
-
-    Detection* det = new Detection();
-    Monitor::GetInstance().SetDetection(det);
 
     mainWindow.show();
 

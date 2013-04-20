@@ -19,6 +19,7 @@ public:
 
     QPoint position() { return m_position; }
     QPoint speed() { return m_speed; }
+    void setSpeed(const QPoint& speed) { m_speed = speed; }
 
     void accelerate(bool positive);
     QPoint move(QPoint relativeSpeed = QPoint(0,0));
