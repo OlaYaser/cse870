@@ -7,12 +7,8 @@ class Monitor;
 class Detection
 {
 public:
-   actionCode_t Detect(QList<Object> objects, int& index);
+   actionCode_t Detect(QList<Object> objects, double &angle, int &index);
    bool Detected(double distance);
-
-   void RequestAlarm();
-   void RequestRecommendation();
-   void RequestPrevention();
 
 private:
    actionCode_t m_actionCode;

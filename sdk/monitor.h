@@ -8,10 +8,6 @@
 class Monitor
 {
     friend class SingleAccessPoint;
-    friend class Alarm;
-    friend class Recommendation;
-    friend class Prevention;
-    friend class Detection;
 
     Alarm *alarm;
     Recommendation *rec;
@@ -25,7 +21,7 @@ public:
    void InitiateRecommendation() { m_rec->GetRecommendation(); }
    void InitiateAlarm() { m_ala->InitiateAlarm(); }
 
-   actionCode_t newObjects(QList<Object> objects, int& index) { return m_det->Detect(objects, index); }
+   actionCode_t newObjects(QList<Object> objects, int& index);
 
    void SetRecommendation(Recommendation* rec) { m_rec = rec; }
    void SetPrevention(Prevention* pre) { m_pre = pre; }
