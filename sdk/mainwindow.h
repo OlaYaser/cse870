@@ -17,21 +17,25 @@ class MainWindow : public QMainWindow
     Canvas *canvas;
     QWidget *centralWidget;
     QLabel *vehicleSpeed;
+
     QVBoxLayout *vLayout;
-    QPushButton *button;
+    QHBoxLayout *infoLayout;
+    QHBoxLayout *buttonLayout;
+
+    QPushButton *resumeButton;
+    QPushButton *pauseButton;
+
     QFormLayout *username;
-    QLineEdit *usernameEdit;
     QFormLayout *password;
+    QLineEdit *usernameEdit;
     QLineEdit *passwordEdit;
-    QHBoxLayout *hLayout;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
 
 public slots:
 
-    void soundAlarm() {  }
-    void displaySpeed(int speed) { vehicleSpeed->setText(QString("Vehicle Speed: %1 mph").arg(speed)); }
+    void displaySpeed(QPoint speed) { vehicleSpeed->setText(QString("Vehicle Y Velocity: %1 mph \tVehicle X Velocity: %2 mph").arg(speed.y()).arg(speed.x())); }
 
 protected slots:
     void keyPressEvent(QKeyEvent *event);
@@ -41,8 +45,14 @@ signals:
     void draw(QList<QPoint>);
     void newObject(QPoint);
     void accelerate(bool);
+    void left();
+    void right();
+
     void setAction(actionCode_t);
-    void start();
+    void setAccess(accessCode_t);
+
+    void resume();
+    void pause();
     void newUserInfo(QString, QString);
 };
 

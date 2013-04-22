@@ -12,6 +12,7 @@ class Canvas : public QLabel
     Q_OBJECT
     QList<QPoint> m_points;
     actionCode_t actionCode;
+    accessCode_t accessCode;
 
 protected slots:
     void mousePressEvent(QMouseEvent *event);
@@ -22,7 +23,8 @@ public:
 
 public slots:
     void setPoints(QList<QPoint>);
-    void setAction(actionCode_t);
+    void setAction(actionCode_t action) { actionCode = action; }
+    void setAccess(accessCode_t access) { accessCode = access; }
 
 signals:
     void newPoint(QPoint);

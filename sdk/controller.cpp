@@ -1,7 +1,7 @@
 #include "controller.h"
 #include "monitor.h"
 
-const QPoint CAR_SPEED(0,5);
+const QPoint CAR_SPEED(0,0);
 const QPoint CAR_POSITION(250,350);
 
 Controller::Controller(MainWindow *window, QObject *parent) : QObject(parent)
@@ -9,19 +9,23 @@ Controller::Controller(MainWindow *window, QObject *parent) : QObject(parent)
     mainWindow = window;
     connect(mainWindow, SIGNAL(newObject(QPoint)), this, SLOT(addObject(QPoint)));
     connect(mainWindow, SIGNAL(accelerate(bool)), this, SLOT(accelerateCar(bool)));
-    connect(mainWindow, SIGNAL(start()), this, SLOT(start()));
+    connect(mainWindow, SIGNAL(resume()), this, SLOT(start()));
+    connect(mainWindow, SIGNAL(pause()), this, SLOT(stop()));
     connect(mainWindow, SIGNAL(newUserInfo(QString, QString)), SLOT(setUserInfo(QString,QString)));
+    connect(mainWindow, SIGNAL(left()), this, SLOT(carLeft()));
+    connect(mainWindow, SIGNAL(right()), this, SLOT(carRight()));
 
-    connect(this, SIGNAL(newSpeed(int)), mainWindow, SLOT(displaySpeed(int)));
+    connect(this, SIGNAL(newSpeed(QPoint)), mainWindow, SLOT(displaySpeed(QPoint)));
     connect(this, SIGNAL(drawObjects(QList<QPoint>)), mainWindow, SIGNAL(draw(QList<QPoint>)));
     connect(this, SIGNAL(newAction(actionCode_t)), mainWindow, SIGNAL(setAction(actionCode_t)));
+    connect(this, SIGNAL(newAccess(accessCode_t)), mainWindow, SIGNAL(setAccess(accessCode_t)));
 
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(incrementTime()));
 
     car = new Object(CAR_SPEED, CAR_POSITION);
 
-    emit newSpeed(CAR_SPEED.y());
+    emit newSpeed(CAR_SPEED);
 }
 
 Controller::~Controller()
@@ -34,6 +38,8 @@ void Controller::addObject(const QPoint &position)
     int index;
     accessCode_t access;
     m_sap->access(m_username, m_password, access, objects, index);
+
+    emit newAccess(access);
 
     if (access != ROOT) return;
 
@@ -55,6 +61,8 @@ void Controller::incrementTime()
     accessCode_t access;
     actionCode_t action = m_sap->access(m_username, m_password, access, objects, index);
 
+    emit newAccess(access);
+
     if (access != INTRUDER) {
         QList<QPoint> positions;
 
@@ -74,8 +82,8 @@ void Controller::incrementTime()
         if (action == PREVENTION) {
             objects.removeAt(index);
             car->setSpeed(QPoint(0,0));
-            emit newSpeed(car->speed().y());
-            finish();
+            emit newSpeed(car->speed());
+            stop();
         }
     }
 }
@@ -83,15 +91,37 @@ void Controller::incrementTime()
 void Controller::accelerateCar(bool positive)
 {
     int index;
-    accessCode_t accessCode;
+    accessCode_t access;
 
-    m_sap->access(m_username, m_password, accessCode, objects, index);
+    m_sap->access(m_username, m_password, access, objects, index);
 
-    if (accessCode == INTRUDER) return;
+    emit newAccess(access);
+
+    if (access == INTRUDER) return;
 
     car->accelerate(positive);
 
-    emit newSpeed(car->speed().y());
+    emit newSpeed(car->speed());
+}
+
+void Controller::carLeft()
+{
+    QPoint speed = car->speed();
+    speed.setX(speed.x()+1);
+
+    car->setSpeed(speed);
+
+    emit newSpeed(car->speed());
+}
+
+void Controller::carRight()
+{
+    QPoint speed = car->speed();
+    speed.setX(speed.x()-1);
+
+    car->setSpeed(speed);
+
+    emit newSpeed(car->speed());
 }
 
 void Controller::setUserInfo(const QString &username, const QString &password)

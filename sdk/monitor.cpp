@@ -1,4 +1,5 @@
 #include "monitor.h"
+#include <limits>
 
 Monitor::Monitor()
 {
@@ -16,10 +17,11 @@ Monitor& Monitor::GetInstance()
 
 actionCode_t Monitor::newObjects(QList<Object> objects, int &index)
 {
-    double angle;
+    double angle = -std::numeric_limits<double>::max();
 
-    actionCode_t = m_det->Detect(objects, angle, index);
+    actionCode_t action = m_det->Detect(objects, angle, index);
 
-    //
-    m_ala->
+    m_ala->AlarmSecurity(angle, action);
+
+    return action;
 }

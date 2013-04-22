@@ -9,6 +9,7 @@
 #include "alarm.h"
 #include "recommendation.h"
 #include "checkpoint.h"
+#include <string.h>
 
 using namespace std;
 
@@ -25,7 +26,6 @@ int main(int argc, char *argv[])
     SingleAccessPoint sap(&checkpoint);
 
     controller.setSingleAccessPoint(&sap);
-    controller.start();
 
     mainWindow.show();
 

@@ -37,18 +37,21 @@ public slots:
     void incrementTime();
 
     void accelerateCar(bool positive);
+    void carLeft();
+    void carRight();
 
     void start() { timer->start(100); }
-    void finish() { timer->stop(); }
+    void stop() { timer->stop(); }
 
     void setSingleAccessPoint(SingleAccessPoint *sap) { m_sap = sap; }
     void setUserInfo(const QString &username, const QString &password);
 
 signals:
     void drawObjects(QList<QPoint>);
-    void newAction(actionCode_t);
-    void newSpeed(int);
+    void newSpeed(QPoint);
 
+    void newAction(actionCode_t);
+    void newAccess(accessCode_t);
 };
 
 #endif

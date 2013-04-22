@@ -17,10 +17,6 @@ class Monitor
 public:
    ~Monitor() {}
 
-   void InitiatePrevention() { m_pre->InitiatePrevention(); }
-   void InitiateRecommendation() { m_rec->GetRecommendation(); }
-   void InitiateAlarm() { m_ala->InitiateAlarm(); }
-
    actionCode_t newObjects(QList<Object> objects, int& index);
 
    void SetRecommendation(Recommendation* rec) { m_rec = rec; }

@@ -12,17 +12,26 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     connect(canvas, SIGNAL(newPoint(QPoint)), this, SIGNAL(newObject(QPoint)));
     connect(this, SIGNAL(draw(QList<QPoint>)), canvas, SLOT(setPoints(QList<QPoint>)));
     connect(this, SIGNAL(setAction(actionCode_t)), canvas, SLOT(setAction(actionCode_t)));
+    connect(this, SIGNAL(setAccess(accessCode_t)), canvas, SLOT(setAccess(accessCode_t)));
 
     vLayout->addWidget(canvas);
 
-    vehicleSpeed = new QLabel("Vehicle Speed: ", this);
+    vehicleSpeed = new QLabel("Vehicle Y Velocity: \tVehicle X Velocity: ", this);
     vLayout->addWidget(vehicleSpeed);
 
-    button = new QPushButton("Reverse", this);
-    connect(button, SIGNAL(pressed()), this, SIGNAL(start()));
-    vLayout->addWidget(button);
+    buttonLayout = new QHBoxLayout();
 
-    hLayout = new QHBoxLayout(this);
+    resumeButton = new QPushButton("Reverse", this);
+    connect(resumeButton, SIGNAL(pressed()), this, SIGNAL(resume()));
+
+    buttonLayout->addWidget(resumeButton);
+
+    pauseButton = new QPushButton("Pause", this);
+    connect(pauseButton, SIGNAL(pressed()), this, SIGNAL(pause()));
+
+    buttonLayout->addWidget(pauseButton);
+
+    infoLayout = new QHBoxLayout();
 
     username = new QFormLayout(this);
     usernameEdit = new QLineEdit(this);
@@ -37,10 +46,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 
     connect(passwordEdit, SIGNAL(editingFinished()), this, SLOT(userInfoEntered()));
 
-    hLayout->addLayout(username);
-    hLayout->addLayout(password);
+    infoLayout->addLayout(username);
+    infoLayout->addLayout(password);
 
-    vLayout->addLayout(hLayout);
+    vLayout->addLayout(infoLayout);
+    vLayout->addLayout(buttonLayout);
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
@@ -49,6 +59,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
     if (event->key() == Qt::Key_Up) emit accelerate(true);
     else if (event->key() == Qt::Key_Down) emit accelerate(false);
+    if (event->key() == Qt::Key_Left) emit left();
+    else if (event->key() == Qt::Key_Right) emit right();
 }
 
 void MainWindow::userInfoEntered()
